@@ -62,8 +62,16 @@ function Buscar(){
 
 }
 
-
-
+function vehiculosMayorMenor(){
+    vehiculos.sort( (a,b) =>{
+        return b.Precio - a.Precio;
+    })
+    vehiculos.map( v =>{
+        console.log(v.Marca, v.Modelo);
+    })
+    console.log('====================================================================');    
+}
+vehiculosMayorMenor();
 
 // Marca: Peugeot // Modelo: 206 // Puertas: 4 // Precio: $200.000,00
 // Marca: Honda // Modelo: Titan // Cilindrada: 125cc // Precio: $60.000,00
