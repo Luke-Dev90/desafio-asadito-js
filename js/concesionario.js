@@ -1,3 +1,30 @@
+const TablaBody = document.getElementById('descripcion-productos');
+const Apellido = document.getElementById('apellido-nombre');
+const Localidad = document.getElementById('localidad');
+const Edad = document.getElementById('edad');
+const Horarios = document.getElementById('horarios');
+
+const datos =[{
+    apellido: 'Chalela',
+    nombre: 'Lucas',
+    localidad: 'San Fernando',
+    horarios: ' 14 a 22hs',
+    edad: 30
+}]
+datos.map( d =>{
+    Apellido.innerHTML = `Apellido y Nombre: ${d.apellido} ${d.nombre}`;
+    Localidad.innerHTML = `Localidad: ${d.localidad}`;
+    Horarios.innerHTML = `Disponible apartir de: ${d.horarios}`
+    Edad.innerHTML = `Edad: ${d.edad}`;
+
+})
+
+// <h2 id="apellido-nombre"></h2>
+// <h3 id="localidad"></h3>
+// <h3 id="edad"></h3>
+
+
+
 const vehiculos = [
     {
         Marca: 'Peugeot',
@@ -59,7 +86,6 @@ function Buscar(){
             console.log(`Vehiculo que contien en el modelo la letra: 'Y': ${v.Marca} ${v.Modelo} $ ${v.Precio}`);
         }
     })
-
 }
 
 function vehiculosMayorMenor(){
@@ -72,6 +98,45 @@ function vehiculosMayorMenor(){
     console.log('====================================================================');    
 }
 vehiculosMayorMenor();
+
+function ListarTabla(){
+
+    for (var i = 0; i < vehiculos.length; i++) {
+        
+        // tr para hileras
+        var hilera = document.createElement("tr");
+        
+        // <td> para listar tabla
+        var td1  = document.createElement('td');
+        td1.innerHTML = i;
+        
+        var td2 = document.createElement('td');
+        td2.innerHTML = vehiculos[i].Marca;
+
+        var td3 = document.createElement('td');
+        td3.innerHTML = vehiculos[i].Modelo;
+        
+        var td4 = document.createElement('td');
+        td4.innerHTML = vehiculos[i].Puertas ? vehiculos[i].Puertas : 'N/A';
+        
+        var td5 = document.createElement('td');
+        td5.innerHTML = vehiculos[i].Cilindrada ? vehiculos[i].Cilindrada : 'N/A';
+
+        var td6 = document.createElement('td');
+        td6.innerHTML = vehiculos[i].Precio && vehiculos[i].Precio;
+        
+        hilera.appendChild(td1);
+        hilera.appendChild(td2);
+        hilera.appendChild(td3);
+        hilera.appendChild(td4);
+        hilera.appendChild(td5);
+        hilera.appendChild(td6);
+        
+        TablaBody.appendChild(hilera);
+      }
+}
+
+ListarTabla();
 
 // Marca: Peugeot // Modelo: 206 // Puertas: 4 // Precio: $200.000,00
 // Marca: Honda // Modelo: Titan // Cilindrada: 125cc // Precio: $60.000,00

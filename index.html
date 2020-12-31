@@ -3,10 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Desafio Asadito Js</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col titulo"><h1>Desafio Asadito JS</h1></div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-dark bg-dark">
+                    <a class="btn btn-secondary" href="https://www.linkedin.com/in/lucas-chalela-24052ab2/">LinkedIn</a>
+                    <a class="btn btn-secondary" href="https://github.com/Luke-Dev90">GitHub</a>
+                    <a class="btn btn-secondary" href="https://api.whatsapp.com/send?phone=+5491134231732">Whatsapp</a>
+              </nav>        
+        </div>
+        
+        <div class="row">
+            <h2 id="apellido-nombre"></h2>
+            <h3 id="localidad"></h3>
+            <h3 id="edad"></h3>
+            <h3 id="horarios"></h3>
+            <p>Gracias por leer y revisar mi desafio. <br>
+                Soy estudiante de la carrera Java Full stack, En EducacionIT
+                Me encuentro terminando la parte intermedia de la carrera.
+                Por otro lado estoy haciendo cursos en Udemy para React JS y node JS. <br>
+                <b>Por consola van a encontrar los datos solicitados.</b> 
+            </p>
+
+            <h4>Conocimientos</h4>
+            <ol>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>bootstrap</li>
+                <li>React Js</li>
+            </ol>
+
+
+        </div>
+        <div class="row">
+            <table class="tabla-productos table-secondary">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Puerta</th>
+                        <th>Cilindrada</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="descripcion-productos">
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
     <script src="js/concesionario.js"></script>
 </body>
 </html>
